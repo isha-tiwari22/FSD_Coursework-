@@ -35,7 +35,7 @@ require_once '../includes/header.php';
 <main class="main-content">
 <div class="auth-container fade-in">
     <div style="text-align: center; margin-bottom: 2rem;">
-        <i class="fa-solid fa-layer-group" style="font-size: 3rem; color: var(--primary); margin-bottom: 1rem;"></i>
+        <img src="assets/images/favicon.png" alt="Logo" style="width: 80px; height: 80px; margin-bottom: 1.5rem; border-radius: 50%; box-shadow: var(--shadow-md);">
         <h2>Welcome Back</h2>
         <p style="color: var(--text-muted);">Enter your details to access the system</p>
     </div>
@@ -50,12 +50,12 @@ require_once '../includes/header.php';
         <input type="hidden" name="csrf_token" value="<?php echo generateCsrfToken(); ?>">
         
         <div class="form-group">
-            <label class="form-label">Username or Email</label>
+            <label class="form-label"><i class="fa-solid fa-user" style="margin-right: 0.5rem; font-size: 0.8rem; opacity: 0.7;"></i> Username or Email</label>
             <input type="text" name="login" class="form-control" required>
         </div>
         
         <div class="form-group">
-            <label class="form-label">Password</label>
+            <label class="form-label"><i class="fa-solid fa-lock" style="margin-right: 0.5rem; font-size: 0.8rem; opacity: 0.7;"></i> Password</label>
             <input type="password" name="password" class="form-control" required>
         </div>
         

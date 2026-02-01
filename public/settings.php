@@ -171,7 +171,7 @@ require_once '../includes/header.php';
                                 </div>
                             </div>
 
-                            <div class="form-group" style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+                            <div class="form-group grid-2-col">
                                 <div>
                                     <label class="form-label">First Name</label>
                                     <input type="text" name="first_name" class="form-control" value="<?php echo h($user['first_name'] ?? ''); ?>">

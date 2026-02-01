@@ -17,6 +17,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     
     if (empty($username) || empty($email) || empty($password) || empty($first_name) || empty($last_name)) {
         $error = "All fields are required.";
+    } elseif (strlen($password) < 8) {
+        $error = "Password must be at least 8 characters long.";
     } else {
         // Check if user exists
         $stmt = $pdo->prepare("SELECT id FROM users WHERE username = ? OR email = ?");
@@ -41,7 +43,10 @@ require_once '../includes/header.php';
 
 <main class="main-content">
 <div class="auth-container fade-in">
-    <h2 style="text-align: center; margin-bottom: 2rem;">Create Account</h2>
+    <div style="text-align: center; margin-bottom: 2rem;">
+        <img src="assets/images/favicon.png" alt="Logo" style="width: 80px; height: 80px; margin-bottom: 1.5rem; border-radius: 50%; box-shadow: var(--shadow-md);">
+        <h2>Create Account</h2>
+    </div>
     
     <?php if($error): ?>
         <div class="alert alert-error">
@@ -58,30 +63,31 @@ require_once '../includes/header.php';
     <form method="POST" action="">
         <input type="hidden" name="csrf_token" value="<?php echo generateCsrfToken(); ?>">
         
-        <div class="form-group" style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+        <div class="form-group grid-2-col">
             <div>
-                <label class="form-label">First Name</label>
+                <label class="form-label"><i class="fa-solid fa-user" style="margin-right: 0.5rem; font-size: 0.8rem; opacity: 0.7;"></i> First Name</label>
                 <input type="text" name="first_name" class="form-control" required>
             </div>
             <div>
-                <label class="form-label">Last Name</label>
+                <label class="form-label"><i class="fa-solid fa-user" style="margin-right: 0.5rem; font-size: 0.8rem; opacity: 0.7;"></i> Last Name</label>
                 <input type="text" name="last_name" class="form-control" required>
             </div>
         </div>
 
         <div class="form-group">
-            <label class="form-label">Username</label>
+            <label class="form-label"><i class="fa-solid fa-id-card" style="margin-right: 0.5rem; font-size: 0.8rem; opacity: 0.7;"></i> Username</label>
             <input type="text" name="username" class="form-control" required>
         </div>
         
         <div class="form-group">
-            <label class="form-label">Email Address</label>
+            <label class="form-label"><i class="fa-solid fa-envelope" style="margin-right: 0.5rem; font-size: 0.8rem; opacity: 0.7;"></i> Email Address</label>
             <input type="email" name="email" class="form-control" required>
         </div>
         
         <div class="form-group">
-            <label class="form-label">Password</label>
-            <input type="password" name="password" class="form-control" required>
+            <label class="form-label"><i class="fa-solid fa-lock" style="margin-right: 0.5rem; font-size: 0.8rem; opacity: 0.7;"></i> Password</label>
+            <input type="password" name="password" class="form-control" minlength="8" required>
+            <small style="color: var(--text-muted); font-size: 0.8rem;">Minimum 8 characters required.</small>
         </div>
         
         <button type="submit" class="btn btn-primary" style="width: 100%;">

@@ -9,7 +9,7 @@ require_once '../includes/header.php';
     <div class="container">
         <div class="page-header fade-in">
             <div class="page-title">
-                <h1>Contact Us</h1>
+                <h1><i class="fa-solid fa-envelope" style="color: var(--primary); margin-right: 0.5rem;"></i> Contact Us</h1>
                 <p style="color: var(--text-muted);">We're here to help you</p>
             </div>
         </div>
@@ -22,17 +22,17 @@ require_once '../includes/header.php';
                     <p style="color: var(--text-muted); margin-bottom: 2rem;">Have questions or need assistance? Feel free to reach out to our support team.</p>
                     
                     <div style="margin-bottom: 1.5rem;">
-                        <div style="color: var(--primary); font-weight: 600; margin-bottom: 0.3rem;">Email Support</div>
+                        <div style="color: var(--primary); font-weight: 600; margin-bottom: 0.3rem;"><i class="fa-solid fa-envelope" style="margin-right: 0.5rem;"></i> Email Support</div>
                         <p style="color: var(--text-muted); font-size: 0.9rem;">support@harayobhetiyo.com</p>
                     </div>
 
                     <div style="margin-bottom: 1.5rem;">
-                        <div style="color: var(--primary); font-weight: 600; margin-bottom: 0.3rem;">Office Address</div>
+                        <div style="color: var(--primary); font-weight: 600; margin-bottom: 0.3rem;"><i class="fa-solid fa-map-location-dot" style="margin-right: 0.5rem;"></i> Office Address</div>
                         <p style="color: var(--text-muted); font-size: 0.9rem;">123 University Ave, Kathmandu, Nepal</p>
                     </div>
 
                     <div>
-                        <div style="color: var(--primary); font-weight: 600; margin-bottom: 0.3rem;">Business Hours</div>
+                        <div style="color: var(--primary); font-weight: 600; margin-bottom: 0.3rem;"><i class="fa-solid fa-clock" style="margin-right: 0.5rem;"></i> Business Hours</div>
                         <p style="color: var(--text-muted); font-size: 0.9rem;">Sun - Fri: 9:00 AM - 6:00 PM</p>
                     </div>
                 </div>
@@ -55,7 +55,9 @@ require_once '../includes/header.php';
                             <label class="form-label">Message</label>
                             <textarea class="form-control" rows="5" placeholder="How can we help?" required></textarea>
                         </div>
-                        <button type="submit" class="btn btn-primary" style="width: 100%;">Send Message</button>
+                        <button type="submit" class="btn btn-primary" style="width: 100%;">
+                            <i class="fa-solid fa-paper-plane" style="margin-right: 0.5rem;"></i> Send Message
+                        </button>
                     </form>
                 </div>
             </div>

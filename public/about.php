@@ -9,7 +9,7 @@ require_once '../includes/header.php';
     <div class="container">
         <div class="page-header fade-in">
             <div class="page-title">
-                <h1>About Us</h1>
+                <h1><i class="fa-solid fa-circle-info" style="color: var(--primary); margin-right: 0.5rem;"></i> About Us</h1>
                 <p style="color: var(--text-muted);">Bringing communities together to recover lost belongings</p>
             </div>
         </div>
