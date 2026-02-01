@@ -23,12 +23,12 @@ require_once '../includes/header.php';
                     
                     <div style="margin-bottom: 1.5rem;">
                         <div style="color: var(--primary); font-weight: 600; margin-bottom: 0.3rem;"><i class="fa-solid fa-envelope" style="margin-right: 0.5rem;"></i> Email Support</div>
-                        <p style="color: var(--text-muted); font-size: 0.9rem;">support@harayobhetiyo.com</p>
+                        <p style="color: var(--text-muted); font-size: 0.9rem;">harayobhettiyo@lostandfound.com</p>
                     </div>
 
                     <div style="margin-bottom: 1.5rem;">
                         <div style="color: var(--primary); font-weight: 600; margin-bottom: 0.3rem;"><i class="fa-solid fa-map-location-dot" style="margin-right: 0.5rem;"></i> Office Address</div>
-                        <p style="color: var(--text-muted); font-size: 0.9rem;">123 University Ave, Kathmandu, Nepal</p>
+                        <p style="color: var(--text-muted); font-size: 0.9rem;">Herald College Kathmandu</p>
                     </div>
 
                     <div>
