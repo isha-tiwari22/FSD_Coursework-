@@ -51,3 +51,20 @@ project_root/
 ## Known Issues
 -   Email sending is not configured (registration simulates success).
 -   Image upload for items is not implemented in this version (optional feature).
+
+## Project Pros and Cons
+
+### Strengths
+- **Modern UI**: Dark-themed glassmorphism design provides a premium user experience.
+- **Security**: Robust protection against SQL Injection, XSS, and CSRF.
+- **Self-Healing Database**: The system automatically repairs its schema and adds missing columns on the fly.
+- **Real-time Interaction**: Live AJAX search allows users to find items without page reloads.
+- **Lightweight**: No heavy frameworks or external dependencies required.
+- **Responsiveness**: Works perfectly across mobile, tablet, and desktop screens.
+
+### Limitations
+- **Databse Bloat**: Storing images as LONGBLOBs can significantly increase database size.
+- **Retrieval Speed**: Serving images from the database is slower than serving from a filesystem.
+- **Notification Gap**: Currently lacks real-time email or SMS alerts for claim requests.
+- **Scalability**: Designed for a single community; lacks multi-tier administrative permissions.
+- **Manual Deployment**: Requires manual file transfer (SCP/FTP) without integrated CI/CD.

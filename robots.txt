@@ -1,0 +1,9 @@
+User-agent: *
+Disallow: /config/
+Disallow: /includes/
+Disallow: /public/assets/uploads/
+Allow: /public/assets/css/
+Allow: /public/assets/js/
+Allow: /public/assets/images/
+
+Sitemap: http://localhost/Isha_Coursework/sitemap.xml

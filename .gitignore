@@ -1,0 +1,16 @@
+# Isha Coursework Git Ignore
+/config/db_local.php
+/public/assets/uploads/profiles/*
+/public/assets/uploads/items/*
+!/public/assets/uploads/profiles/.htaccess
+!/public/assets/uploads/items/.htaccess
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# PHP internal
+error_log
+php_errors.log
+composer.lock
+vendor/

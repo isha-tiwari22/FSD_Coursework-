@@ -1,0 +1,22 @@
+# Extremely Minimal Root Configuration
+# Optimized for Student Servers and Easy Access
+
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    
+    # 1. Handle root access
+    RewriteRule ^$ public/index.php [L]
+
+    # 2. Handle assets access
+    RewriteRule ^assets/(.*)$ public/assets/$1 [L]
+
+    # 3. Clean URLs (Allow accessing /login instead of /login.php)
+    # Check if a .php file exists in the public directory
+    RewriteCond %{DOCUMENT_ROOT}/Isha_Coursework/public/$1.php -f
+    RewriteRule ^([^/]+)/?$ public/$1.php [L]
+
+    # 4. Fallback: Route other requests to public folder if file or folder exists there
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule ^(.*)$ public/$1 [L]
+</IfModule>
